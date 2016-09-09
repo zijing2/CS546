@@ -60,26 +60,34 @@ function sayHelloTo(firstName, lastName, title){
  * If you run cupsOfCoffee(5) it would return:
  */
 function cupsOfCoffee(howManyCups){
-	if(typeof(howManyCups)!='number'||howManyCups<0){
-		throw "the number of coffees is invalid";
+	if(typeof(howManyCups)!='number'||howManyCups<1){
+		throw "hey buddy, wrong call, no free coffee today";
 	}
 
-	for(var i=howManyCups; i>0; i--){
+	for(var i=howManyCups; i>1; i--){
 		//console.log(i.toString() + 'asdfasdf');
 		console.log(i.toString() + ' cups of coffee on the desk! '
 								+ i.toString() + ' cups of coffee!'+"\n"+'Pick one up, drink the cup, '+ (i-1).toString()
 								 + ' cups of coffee on the desk!'+"\n");
 	}
 
+
+	console.log('1 cup of coffee on the desk! 1 cup of coffee!'+ "\n" + 'Pick it up, drink the cup, no more coffee left on the desk!');
+	
 }
 
+ //cupsOfCoffee(99);
 
-// cupsOfCoffee(99);
+/**
+ * For the fourth function, you will calculate how many times a substring occurs in a given string
+ * For example, calling countOccurrencesOfSubstring("hello world", "o");should return 2, 
+ * because the letter o appears two times in the string.
+ * However, you must also factor in a case where there are overlaps! 
+ * When you call countOccurrencesOfSubstring("Helllllllo, class!", "ll");should return 6.
+ */
+function occurrencesOfSubstring(fullString, substring){
 
-
-
-
-
+}
 
 
 
