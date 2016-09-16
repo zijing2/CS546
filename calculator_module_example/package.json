@@ -1,0 +1,12 @@
+{
+  "name": "calculator_module_example",
+  "version": "0.0.1",
+  "description": "a simple calculator module",
+  "main": "app.js",
+  "scripts": {
+  	"start": "node app.js",
+    "test": " "
+  },
+  "author": "Zijing Huang",
+  "license": "MIT"
+}
