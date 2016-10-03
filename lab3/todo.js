@@ -12,6 +12,12 @@ var exportedMethods = {
         
         return todoItems().then((taskCollection) => {  
            
+           return taskCollection.findOne({_id: id});
+            // taskCollection.findOne({_id:id},(err,data) => {
+            //     console.log(2222,id,data,2222);
+            //     findOneResult = data;}
+            //     );
+            // return findOneResult;
         });
     },
     getAllTasks() {
