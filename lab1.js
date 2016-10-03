@@ -68,9 +68,10 @@ function cupsOfCoffee(howManyCups){
 		throw "hey buddy, wrong call, no free coffee today";
 	}
 
+	var str1 = '';
 	for(var i=howManyCups; i>1; i--){
 		//console.log(i.toString() + 'asdfasdf');
-		var str1 = i.toString() + ' cups of coffee on the desk! '
+		var str1 = str1 + i.toString() + ' cups of coffee on the desk! '
 								+ i.toString() + ' cups of coffee!'+"\n"+'Pick one up, drink the cup, '+ (i-1).toString()
 								 + ' cups of coffee on the desk!'+"\n";
 	}
@@ -80,7 +81,7 @@ function cupsOfCoffee(howManyCups){
 	return str1+str2;
 }
 
- //cupsOfCoffee(99);
+ console.log(cupsOfCoffee(5));
 
 /**
  * @description 

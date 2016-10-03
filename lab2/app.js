@@ -1,10 +1,13 @@
 var fileData = require("./fileData");
 var testMetrics = require("./textMetrics");
 
-
+//file location
 var chapter1Path = "/Users/huangzijing/Downloads/chapter1.txt";
 var chapter2Path = "/Users/huangzijing/Downloads/chapter2.txt";
 var chapter3Path = "/Users/huangzijing/Downloads/chapter3.txt";
+var c1ResultPath = "chapter1Result.txt";
+var c2ResultPath = "chapter2Result.txt";
+var c3ResultPath = "chapter3Result.txt";
 
 try {
 	var fileRdPromise1 = fileData.getFileAsString(chapter1Path);
@@ -17,7 +20,7 @@ try {
 	}).then((data)=>{
 		//save and print
 		var saveText = JSON.stringify(data);
-		var fileWtPromise1 = fileData.saveStringToFile("chapter1Result.txt",saveText);
+		var fileWtPromise1 = fileData.saveStringToFile(c1ResultPath,saveText);
 		fileWtPromise1.then((rtn)=>{
 			console.log("finish analyse chapter1");
 			},(err)=>{
@@ -35,7 +38,7 @@ try {
 	}).then((data)=>{
 		//save and print
 		var saveText = JSON.stringify(data);
-		var fileWtPromise2 = fileData.saveStringToFile("chapter2Result.txt",saveText);
+		var fileWtPromise2 = fileData.saveStringToFile(c2ResultPath,saveText);
 		fileWtPromise2.then((rtn)=>{
 			console.log("finish analyse chapter2");
 			},(err)=>{
@@ -53,7 +56,7 @@ try {
 	}).then((data)=>{
 		//save and print
 		var saveText = JSON.stringify(data);
-		var fileWtPromise3 = fileData.saveStringToFile("chapter3Result.txt",saveText);
+		var fileWtPromise3 = fileData.saveStringToFile(c3ResultPath,saveText);
 		fileWtPromise3.then((rtn)=>{
 			console.log("finish analyse chapter3");
 			},(err)=>{
