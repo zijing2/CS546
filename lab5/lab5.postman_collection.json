@@ -1,0 +1,380 @@
+{
+	"variables": [],
+	"info": {
+		"name": "lab5",
+		"_postman_id": "5665ca37-55d1-272b-3548-eefda7771c91",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/recipes",
+			"request": {
+				"url": "localhost:3000/recipes",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "/recipes"
+			},
+			"response": [
+				{
+					"name": "get_recipe_all",
+					"originalRequest": {
+						"url": "localhost:3000/recipes",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "721",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 22 Oct 2016 22:50:33 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "ETag",
+							"key": "ETag",
+							"value": "W/\"2d1-m9qKOIb4hutli1rZqhjwYg\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 14,
+					"body": "[{\"_id\":\"41e153bf-9d04-483d-aa03-1ba473e83bb0\",\"title\":\"Fried Eggs\",\"ingredients\":[{\"name\":\"Egg\",\"amount\":\"2 eggs\"},{\"name\":\"Olive Oil\",\"amount\":\"2 tbsp\"}],\"steps\":[\"First, heat a non-stick pan on medium-high until hot\",\"Add the oil to the pan and allow oil to warm; it is ready the oil immediately sizzles upon contact with a drop of water.\",\"Crack the egg and place the egg and yolk in a small prep bowl; do not crack the yolk!\",\"Gently pour the egg from the bowl onto the oil\",\"Wait for egg white to turn bubbly and completely opaque (approx 2 min)\",\"Using a spatula, flip the egg onto its uncooked side until it is completely cooked (approx 2 min)\",\"Remove from oil and plate\",\"Repeat for second egg\"],\"comments\":[]}]"
+				}
+			]
+		},
+		{
+			"name": "localhost:3000/recipes",
+			"request": {
+				"url": "localhost:3000/recipes/41e153bf-9d04-483d-aa03-1ba473e83bb0",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Get:/recipes/:id"
+			},
+			"response": [
+				{
+					"name": "get_recipe_by_id",
+					"originalRequest": {
+						"url": "localhost:3000/recipes/41e153bf-9d04-483d-aa03-1ba473e83bb0",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "719",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 22 Oct 2016 22:50:57 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "ETag",
+							"key": "ETag",
+							"value": "W/\"2cf-uf4EAc6e2fL4goMphbph8A\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 13,
+					"body": "{\"_id\":\"41e153bf-9d04-483d-aa03-1ba473e83bb0\",\"title\":\"Fried Eggs\",\"ingredients\":[{\"name\":\"Egg\",\"amount\":\"2 eggs\"},{\"name\":\"Olive Oil\",\"amount\":\"2 tbsp\"}],\"steps\":[\"First, heat a non-stick pan on medium-high until hot\",\"Add the oil to the pan and allow oil to warm; it is ready the oil immediately sizzles upon contact with a drop of water.\",\"Crack the egg and place the egg and yolk in a small prep bowl; do not crack the yolk!\",\"Gently pour the egg from the bowl onto the oil\",\"Wait for egg white to turn bubbly and completely opaque (approx 2 min)\",\"Using a spatula, flip the egg onto its uncooked side until it is completely cooked (approx 2 min)\",\"Remove from oil and plate\",\"Repeat for second egg\"],\"comments\":[]}"
+				}
+			]
+		},
+		{
+			"name": "localhost:3000/recipes",
+			"request": {
+				"url": "localhost:3000/recipes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Fried Eggs\",\n  \"ingredients\": [\n    {\n      \"name\": \"Egg\",\n      \"amount\": \"2 eggs\"\n    },\n    {\n      \"name\": \"Olive Oil\",\n      \"amount\": \"2 tbsp\"\n    }\n  ],\n  \"steps\": [\n   \t\"First, heat a non-stick pan on medium-high until hot\",\n    \"Add the oil to the pan and allow oil to warm; it is ready the oil immediately sizzles upon contact with a drop of water.\",\n    \"Crack the egg and place the egg and yolk in a small prep bowl; do not crack the yolk!\",\n    \"Gently pour the egg from the bowl onto the oil\",    \n    \"Wait for egg white to turn bubbly and completely opaque (approx 2 min)\",\n    \"Using a spatula, flip the egg onto its uncooked side until it is completely cooked (approx 2 min)\",\n    \"Remove from oil and plate\",\n    \"Repeat for second egg\"\n  ]\n}"
+				},
+				"description": "/recipes"
+			},
+			"response": [
+				{
+					"name": "recipe_post",
+					"originalRequest": {
+						"url": "localhost:3000/recipes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Fried Eggs\",\n  \"ingredients\": [\n    {\n      \"name\": \"Egg\",\n      \"amount\": \"2 eggs\"\n    },\n    {\n      \"name\": \"Olive Oil\",\n      \"amount\": \"2 tbsp\"\n    }\n  ],\n  \"steps\": [\n   \t\"First, heat a non-stick pan on medium-high until hot\",\n    \"Add the oil to the pan and allow oil to warm; it is ready the oil immediately sizzles upon contact with a drop of water.\",\n    \"Crack the egg and place the egg and yolk in a small prep bowl; do not crack the yolk!\",\n    \"Gently pour the egg from the bowl onto the oil\",    \n    \"Wait for egg white to turn bubbly and completely opaque (approx 2 min)\",\n    \"Using a spatula, flip the egg onto its uncooked side until it is completely cooked (approx 2 min)\",\n    \"Remove from oil and plate\",\n    \"Repeat for second egg\"\n  ]\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "719",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 22 Oct 2016 22:48:18 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "ETag",
+							"key": "ETag",
+							"value": "W/\"2cf-uf4EAc6e2fL4goMphbph8A\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 44,
+					"body": "{\"_id\":\"41e153bf-9d04-483d-aa03-1ba473e83bb0\",\"title\":\"Fried Eggs\",\"ingredients\":[{\"name\":\"Egg\",\"amount\":\"2 eggs\"},{\"name\":\"Olive Oil\",\"amount\":\"2 tbsp\"}],\"steps\":[\"First, heat a non-stick pan on medium-high until hot\",\"Add the oil to the pan and allow oil to warm; it is ready the oil immediately sizzles upon contact with a drop of water.\",\"Crack the egg and place the egg and yolk in a small prep bowl; do not crack the yolk!\",\"Gently pour the egg from the bowl onto the oil\",\"Wait for egg white to turn bubbly and completely opaque (approx 2 min)\",\"Using a spatula, flip the egg onto its uncooked side until it is completely cooked (approx 2 min)\",\"Remove from oil and plate\",\"Repeat for second egg\"],\"comments\":[]}"
+				}
+			]
+		},
+		{
+			"name": "localhost:3000/recipes/bd8fa389-3a7a-4478-8845-e36a02de1b7b",
+			"request": {
+				"url": "localhost:3000/recipes/bd8fa389-3a7a-4478-8845-e36a02de1b7b",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"roast bacon\",\n  \"ingredients\": [\n    {\n      \"name\": \"pork\",\n      \"amount\": \"1 eggs\"\n    }\n  ],\n  \"steps\": [\n    \"step1\",\n    \"step2\",\n    \"step3\"\n  ]\n}"
+				},
+				"description": "Put:/recipes"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/recipes/bd8fa389-3a7a-4478-8845-e36a02de1b7b",
+			"request": {
+				"url": "localhost:3000/recipes/41e153bf-9d04-483d-aa03-1ba473e83bb0",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Delect:/recipes"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/be47c150-aaaf-4310-9d47-edf4c3ca17ee",
+			"request": {
+				"url": "localhost:3000/comments/be47c150-aaaf-4310-9d47-edf4c3ca17ee",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\":1,\n\t\"comment\":\"comment1\",\n\t\"poster\":\"poster1\"\n\t\n}"
+				},
+				"description": "Get:/comments/:commentId"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/f634cfa7-2f2d-4fab-8f46-ec83d0a8f0ec",
+			"request": {
+				"url": "localhost:3000/comments/recipe/2b7d544c-5cfb-4326-8f51-6f45cae1faac",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":\"comment2\",\n\t\"poster\":\"poster2\"\n\t\n}"
+				},
+				"description": "Get:/comments/recipe/:recipeId"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/f634cfa7-2f2d-4fab-8f46-ec83d0a8f0ec",
+			"request": {
+				"url": "localhost:3000/comments/2b7d544c-5cfb-4326-8f51-6f45cae1faac",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":\"comment1\",\n\t\"poster\":\"poster1\"\n\t\n}"
+				},
+				"description": "Del:/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/f634cfa7-2f2d-4fab-8f46-ec83d0a8f0ec",
+			"request": {
+				"url": "localhost:3000/comments/2b7d544c-5cfb-4326-8f51-6f45cae1faac/be47c150-aaaf-4310-9d47-edf4c3ca17ee",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comment\":\"comment1\",\n\t\"poster\":\"poster1\"\n}"
+				},
+				"description": "Put:/recipes/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/comments/be47c150-aaaf-4310-9d47-edf4c3ca17ee",
+			"request": {
+				"url": "localhost:3000/comments/be47c150-aaaf-4310-9d47-edf4c3ca17ee",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\":1,\n\t\"comment\":\"comment1\",\n\t\"poster\":\"poster1\"\n\t\n}"
+				},
+				"description": "Del:/comments/:commentId"
+			},
+			"response": []
+		}
+	]
+}

@@ -4,63 +4,62 @@ const router = express.Router();
 const data = require("../data");
 const commentsData = data.comments;
 
-router.get("/", (req, res) => {
-    recipesData.getAllRecipes().then((recipesList) => {
-        res.status(200).json(recipesList);
+router.get("/recipe/:recipeId", (req, res) => {
+        commentsData.getAllCommentsByReceptId(req.params.recipeId).then((commentsList) => {
+        res.status(200).json(commentsList);
     }).catch((e) => {
         res.status(500).json({ error: e });
     });
 });
 
-router.get("/:id", (req, res) => {
-    recipesData.getRecipeById(req.params.id).then((recipe) => {
-        res.json(recipe);
+router.get("/:commentId", (req, res) => {
+    commentsData.getCommentById(req.params.commentId).then((comment) => {
+        res.status(200).json(comment);
     }).catch(() => {
-        res.status(404).json({ error: "recipe not found" });
+        res.status(404).json({ error: "comment not found" });
     });
 });
 
-router.post("/", (req, res) => {
-    let recipePostData = req.body;
+router.post("/:recipeId/", (req, res) => {
+    let commentPostData = req.body;
 
-    recipesData.addRecipe(recipePostData.title, recipePostData.ingredients, recipePostData.steps)
-        .then((newRecipe) => {
-            res.json(newRecipe);
+    commentsData.addComment(req.params.recipeId, commentPostData.comment, commentPostData.poster)
+        .then((newComment) => {
+            res.json(newComment);
         }).catch((e) => {
             res.status(500).json({ error: e });
         });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:recipeId/:commentId", (req, res) => {    
     let updatedData = req.body;
+    let getComment = commentsData.getCommentById(req.params.commentId);
 
-    let getRecipe = recipesData.getRecipeById(req.params.id);
-
-    getRecipe.then(() => {
-        return recipesData.updateRecipe(req.params.id, updatedData)
+    getComment.then((comment) => {
+        return commentsData.updateComment(comment, updatedData)
             .then((updatedRecipe) => {
-                res.json(updatedRecipe);
+                res.sendStatus(200).json(updatedData);
             }).catch((e) => {
                 res.status(500).json({ error: e });
             });
     }).catch(() => {
-        res.status(404).json({ error: "Post not found" });
+        res.status(404).json({ error: "Comment not found" });
     });
 
 });
 
 router.delete("/:id", (req, res) => {
-    let getRecipe = recipesData.getRecipeById(req.params.id);
+    let getComment = commentsData.getCommentById(req.params.id);
 
-    getRecipe.then(() => {
-        return recipesData.removeRecipe(req.params.id)
+    getComment.then((comment) => {
+        return commentsData.removeComment(comment)
             .then(() => {
                 res.sendStatus(200);
             }).catch((e) => {
                 res.status(500).json({ error: e });
             });
     }).catch(() => {
-        res.status(404).json({ error: "recipe not found" });
+        res.status(404).json({ error: "comment not found" });
     });
 });
 

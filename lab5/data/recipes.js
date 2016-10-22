@@ -17,7 +17,6 @@ let exportedMethods = {
             return recipesCollection
                 .findOne({_id: id})
                 .then((recipe) => {
-
                     if (!recipe) 
                         throw "recipe not found";
                     return recipe;
@@ -92,7 +91,7 @@ let exportedMethods = {
                 .removeOne({_id: id})
                 .then((deletionInfo) => {
                     if (deletionInfo.deletedCount === 0) {
-                        throw(`Could not delete recipe with id of ${id}`)
+                        throw(`Could not delete recipe with id of ${id}`);
                     } else {}
                 });
         });
