@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const data = require("../data");
-const recipesData = data.recipes;
+const commentsData = data.comments;
 
 router.get("/", (req, res) => {
     recipesData.getAllRecipes().then((recipesList) => {
@@ -63,6 +63,8 @@ router.delete("/:id", (req, res) => {
         res.status(404).json({ error: "recipe not found" });
     });
 });
+
+
 
 
 module.exports = router;
