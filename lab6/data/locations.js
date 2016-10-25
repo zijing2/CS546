@@ -31,7 +31,7 @@ let exportedMethods = {
     getLocation: (id) => {
         if (id === undefined) return Promise.reject("No id provided");
 
-        let location = locationList.filter(x => x.id === id).shift();
+        let location = locationList.filter((x) => {if(x.id == id) return x;}).shift();
         if (!location) return Promise.reject("No location found")
 
         return Promise.resolve(location);

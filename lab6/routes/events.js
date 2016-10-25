@@ -25,9 +25,9 @@ router.get("/:id", (req, res) => {
                     }
                 }
                 res.status(200).render("events/single",  { event : event, people:peopleList } );
+            }).catch((e) => {
+                res.status(500).json({ error: e });
             });
-        
-            
         
     }).catch((e) => {
         res.status(404).render("error/404");

@@ -65,7 +65,7 @@ let exportedMethods = {
             return Promise.reject("No attendee id provided")
         };
 
-        let filterEvents = eventList.filter((x) => { for(var i=0; i<x.attendees.length;i++){if(x.attendees[i]==attendeeId){return x;break;}} });
+        let filterEvents = eventList.filter((x) => { for(var i=0; i<x.attendees.length;i++){if(x.attendees[i]==attendeeId){return x;}} });
 
         return Promise.resolve(filterEvents);
     }
