@@ -12,12 +12,12 @@
 
   <tbody>
         <tr>
-        <td><a href="/{{event.id}}">{{event.id}}</a></td>
+        <td>{{event.id}}</td>
         <td>{{#each people}}<a href="../people/{{id}}">{{name}}</a><br/>{{/each}}</td>
         <td>{{event.title}}</td>
         <td>{{event.startTime}}</td>
         <td>{{event.description}}</td>
-        <td>{{event.location}}</td>
+        <td><a href="../locations/{{event.location}}">{{event.location}}</a></td>
         </tr>
   </tbody>
 </table>
