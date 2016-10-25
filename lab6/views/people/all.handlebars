@@ -1,0 +1,17 @@
+<table border="1">
+    <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+        {{#each people}} 
+        <tr>
+        <td><a href="/{{id}}">{{id}}</a></td>
+        <td><a href="/{{id}}">{{name}}</a></td>
+        </tr>
+        {{/each}}
+  </tbody>
+</table>

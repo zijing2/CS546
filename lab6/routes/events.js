@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const data = require("../data");
+const events = data.events;
+const people = data.people;
 
 // Single Event Page
 router.get("/:id", (req, res) => {
@@ -11,15 +13,38 @@ router.get("/:id", (req, res) => {
     // You will also list the location of the event, said location's name, and a link to the location page
 
     // If a event is not found, display the 404 error page
-    res.render("misc/debug", { debug: true, modelData: { something: "SomeValue" } });
+    return events.getEvent(req.params.id).then((event)=>{
+            return people.getAllPeople().then((people)=>{
+                var peopleList = [];
+                for (var i = 0; i < event.attendees.length; i++) {
+                    for(var j =0; j < people.length; j++){
+                        if(event.attendees[i] == people[j].id){
+                            peopleList.push(people[j]);
+                            break;
+                        }
+                    }
+                }
+                res.status(200).render("events/single",  { event : event, people:peopleList } );
+            });
+        
+            
+        
+    }).catch((e) => {
+        res.status(404).render("error/404");
+    });
 });
 
 // Event Index Page
 router.get("/", (req, res) => {
     // Display a list of all events; it can be in an unordered list, or a table
     // Each of these events need to link to the single event page
+    
+    return events.getAllEvents().then((eventsList)=>{
+        res.render("events/all",  { events : eventsList } );
+    }).catch((e) => {
+        res.status(500).json({ error: e });
+    });
 
-    res.render("misc/debug", { debug: true, modelData: { something: "SomeValue" } });
 });
 
 module.exports = router;

@@ -1,0 +1,18 @@
+
+<table border="1">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>events<th>
+    </tr>
+    <tbody>
+        <tr>
+        <td><a href="/{{dataObj.person.0.id}}">{{dataObj.person.0.id}}</a></td>
+        <td><a href="/{{dataObj.person.0.id}}">{{dataObj.person.0.name}}</a></td>
+        <td>{{#each dataObj.evnentsForAttendee}}<a href="../events/{{id}}">{{title}}</a><br/> {{/each}}</td>
+        </tr>
+  </tbody>
+</table>
+
+
+

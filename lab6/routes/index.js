@@ -11,10 +11,9 @@ const constructorMethod = (app) => {
 
     app.use("*", (req, res) => {
         // any unmatched routes (ie, pages that do not exist) will hit this catch-all route
-        let route = path.resolve(`static/about.html`);
-        res.sendFile(route);
-
         // You could also do res.status(num).render(template, data)
+        let route = path.resolve(`static/404.html`);
+        res.status(404).sendFile(route);
     })
 };
 

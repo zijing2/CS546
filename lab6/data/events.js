@@ -54,15 +54,20 @@ let exportedMethods = {
     getEvent: (id) => {
         if (id === undefined) return Promise.reject("No id provided");
 
-        let event = eventList.filter(x => x.id === id).shift();
+        let event = eventList.filter((x) => {if(x.id == id) return x;}).shift();
         if (!event) return Promise.reject("No event found")
 
         return Promise.resolve(event);
     },
     getEventsForAttendee: (attendeeId) => {
-        if (attendeesId === undefined) return Promise.reject("No attendee id provided");
 
-        return Promise.resolve(eventList.filter(x => x.attendees.indexOf(attendeeId) >= 0));
+        if(attendeeId === undefined){
+            return Promise.reject("No attendee id provided")
+        };
+
+        let filterEvents = eventList.filter((x) => { for(var i=0; i<x.attendees.length;i++){if(x.attendees[i]==attendeeId){return x;break;}} });
+
+        return Promise.resolve(filterEvents);
     }
 }
 

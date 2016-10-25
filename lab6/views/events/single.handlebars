@@ -1,0 +1,23 @@
+<table border="1">
+    <thead>
+    <tr>
+      <th>id</th>
+      <th>attendees</th>
+      <th>title</th>
+      <th>startTime</th>
+      <th>description</th>
+      <th>location</th>
+    </tr>
+  </thead>
+
+  <tbody>
+        <tr>
+        <td><a href="/{{event.id}}">{{event.id}}</a></td>
+        <td>{{#each people}}<a href="../people/{{id}}">{{name}}</a><br/>{{/each}}</td>
+        <td>{{event.title}}</td>
+        <td>{{event.startTime}}</td>
+        <td>{{event.description}}</td>
+        <td>{{event.location}}</td>
+        </tr>
+  </tbody>
+</table>
