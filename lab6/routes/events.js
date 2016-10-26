@@ -59,7 +59,7 @@ router.get("/", (req, res) => {
                     var locationsArr = [];
                     for (var j = 0; j < peopleList.length; j++) {
                        if(eventsList[i].attendees.indexOf(peopleList[j].id) >= 0){
-                           peopleArr.push(peopleList[i]);
+                           peopleArr.push(peopleList[j]);
                        }                        
                     }
                     for (var z = 0; z < locationsList.length; z++) {
