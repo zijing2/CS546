@@ -14,11 +14,11 @@
         {{#each events}} 
         <tr>
         <td><a href="/events/{{id}}">{{id}}</a></td>
-        <td>{{attendees}}</td>
+        <td>{{#each peopleArr}}<a href="/people/{{id}}">{{name}}</a><br/>{{/each}}</td>
         <td>{{title}}</td>
         <td>{{startTime}}</td>
         <td>{{description}}</td>
-        <td>{{location}}</td>
+        <td>{{#each locationsArr}}<a href="/locations/{{id}}">{{name}}</a></br>{{/each}}</td>
         </tr>
         {{/each}}
   </tbody>
