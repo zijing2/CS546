@@ -1,22 +1,21 @@
 <div class="row">
   <div class="col-sm-12">
-    <form id="static-form" method="post">
+    <form class="server-form" method="post" action="serverform" id="static-form">
+      <div class="form-group">
+        <label for="textarea1">Textarea</label>
+        <textarea class="form-control" name="textarea" id="textarea1" rows="3" placeholder="A textarea that you will put a moderate amount of text in."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="string">String</label>
+        <input class="form-control" name="string" id="string1" placeholder="An input that will take a string; this string will be inserted into the text from the textarea.">
+      </div>
       <div class="form-group">
         <label for="number1">First Number</label>
-        <input type="number" class="form-control" id="number1" name="number1" placeholder="First Number" value="{{firstNumber}}">
+        <input type="number" class="form-control" id="number1" name="number1" placeholder="An input that will take a number; this will be the number of times the string will be inserted">
       </div>
       <div class="form-group">
         <label for="number2">Second Number</label>
-        <input type="number" class="form-control" id="number2" name="number2" placeholder="Second Number" value="{{secondNumber}}">
-      </div>
-      <div class="form-group">
-        <label for="operation">Operation</label>
-        <select class="form-control" value="{{operation}}" id="operation" name="operation">
-          <option value="add">Addition</option>
-          <option value="subtract">Subtraction</option>
-          <option value="multiply">Multiplication</option>
-          <option value="divide">Division</option>
-        </select>
+        <input type="number" class="form-control" id="number2" name="number2" placeholder="A second input that take a number; this will be the number of characters between each insert.">
       </div>
       <div class="form-group hidden" id="error-container">
         <div class="alert alert-danger text-goes-here">
@@ -26,7 +25,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </div>
       <div class="form-group hidden" id="result-container">
-        <div class="alert alert-success text-goes-here"">
+        <div class="alert alert-success text-goes-here">
         </div>
       </div>
     </form>
