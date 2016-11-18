@@ -1,0 +1,12 @@
+{
+  "name": "lab9",
+  "version": "1.0.0",
+  "description": "Dynamic Pages and Preventing Security Holes",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node app.js"
+  },
+  "author": "Zijing Huang",
+  "license": "ISC"
+}
