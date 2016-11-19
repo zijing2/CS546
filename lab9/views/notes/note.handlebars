@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 style="padding-bottom: 9px;margin: 10px 0 20px;border-bottom: 1px solid #eee;">Node Detail</h1>
+        <h2 id="title">{{note.title}}</h2>
+        <p id="due_date">{{note.due_date}}</p>
+        <div class="summary" style="margin:20px" id="summary">{{{note.summary}}}</div>
+        <div class="body" style="margin:20px" id="body">{{{note.body}}}</div>
+    </div>
+    <nav>
+        <ul class="pager">
+            <li class="previous {{#if previous}}{{else}}disabled{{/if}}" id="note_prev"><a href="javascript:void(0);">&larr; Previous</a></li>
+            <li class="next {{#if next}}{{else}}disabled{{/if}}" id="note_next"><a href="javascript:void(0);">Next &rarr;</a></li>
+        </ul>
+    </nav>
+    <input type="hidden" value="{{current_note}}" id="current_note">
+</div>
