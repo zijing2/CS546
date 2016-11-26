@@ -1,0 +1,36 @@
+   {{#if error}}
+    <div class="alert alert-danger" role="alert">{{error}}</div>
+    {{/if}}
+    <div class="templatemo-content-widget templatemo-login-widget white-bg">
+        <header class="text-center">
+            <div class="square"></div>
+            <h1>Lab10</h1>
+        </header>
+
+        <form action="/login" class="templatemo-login-form" method="POST">
+            <label for="username" style="display:none">
+                Username
+            </label> 
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>			
+                    <input id="username" type="text" class="form-control" name="username" placeholder="ZijingHuang">           
+                </div>	
+            </div>
+            <label for="password" style="display:none">
+                password
+            </label> 
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>	        		
+                    <input id="password" type="password" class="form-control" name="password" placeholder="*******">           
+                </div>	
+            </div>	          
+            <div class="form-group">
+                <button type="submit" class="templatemo-blue-button width-100">Login</button>
+            </div>
+        </form>
+    </div>
+    <div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
+        <p>Not a registered user yet? <strong><a href="#" class="blue-text">Sign up now!</a></strong></p>
+    </div>
