@@ -1,4 +1,4 @@
-global.domain = "http://localhost:3000";
+global.domain = "http://zijing.us:6556";
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -34,7 +34,7 @@ app.set('view engine', 'handlebars');
 
 configRoutes(app);
 
-app.listen(3000, () => {
+app.listen(6556, () => {
     console.log("We've now got a server!");
-    console.log("Your routes will be running on http://localhost:3000");
+    console.log("Your routes will be running on http://localhost:6556");
 });
