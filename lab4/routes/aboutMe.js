@@ -72,4 +72,13 @@ router.get("/classes/details", (req, res) => {
       
 });
 
+router.get("/", (req, res) => {
+    let eduInfo = aboutMeData.getEdu();
+    if(!eduInfo){
+        res.status(404).json({error: "Not found"});
+    }else{
+        res.status(200).json({information: eduInfo});  
+    }        
+});
+
 module.exports = router;
