@@ -2,9 +2,9 @@ var fileData = require("./fileData");
 var testMetrics = require("./textMetrics");
 
 //file location
-var chapter1Path = "/Users/huangzijing/Downloads/chapter1.txt";
-var chapter2Path = "/Users/huangzijing/Downloads/chapter2.txt";
-var chapter3Path = "/Users/huangzijing/Downloads/chapter3.txt";
+var chapter1Path = "chapter1.txt";
+var chapter2Path = "chapter2.txt";
+var chapter3Path = "chapter3.txt";
 var c1ResultPath = "chapter1Result.txt";
 var c2ResultPath = "chapter2Result.txt";
 var c3ResultPath = "chapter3Result.txt";
