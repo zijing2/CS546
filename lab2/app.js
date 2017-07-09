@@ -19,6 +19,7 @@ try {
 		console.log(err);
 	}).then((data)=>{
 		//save and print
+		console.log(data);
 		var saveText = JSON.stringify(data);
 		var fileWtPromise1 = fileData.saveStringToFile(c1ResultPath,saveText);
 		fileWtPromise1.then((rtn)=>{
@@ -37,6 +38,7 @@ try {
 		console.log(err);
 	}).then((data)=>{
 		//save and print
+		console.log(data);
 		var saveText = JSON.stringify(data);
 		var fileWtPromise2 = fileData.saveStringToFile(c2ResultPath,saveText);
 		fileWtPromise2.then((rtn)=>{
@@ -55,6 +57,7 @@ try {
 		console.log(err);
 	}).then((data)=>{
 		//save and print
+		console.log(data);
 		var saveText = JSON.stringify(data);
 		var fileWtPromise3 = fileData.saveStringToFile(c3ResultPath,saveText);
 		fileWtPromise3.then((rtn)=>{
