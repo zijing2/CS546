@@ -4,7 +4,7 @@ const constructorMethod = (app) => {
     app.use("/form", formRoutes);
 
     app.use("*", (req, res) => {
-        res.redirect("/form/static");
+        res.redirect("/form/clientform");
     })
 };
 
