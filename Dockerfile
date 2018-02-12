@@ -3,7 +3,7 @@ MAINTAINER Zijing Huang "hzj_huangzijing@hotmail.com"
 WORKDIR /
 RUN mkdir app
 WORKDIR /app
-ADD /var/www/CS546 /app
+git clone https://github.com/zijing2/CS546.git .
 
 
 
