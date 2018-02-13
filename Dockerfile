@@ -4,9 +4,9 @@ WORKDIR /
 RUN mkdir app
 WORKDIR /app
 RUN git clone https://github.com/zijing2/CS546.git .
-WORKDIR /lab4
+WORKDIR /app/lab4
 RUN npm install
-RUN node app.js
+RUN npm start
 
 
 
