@@ -10,7 +10,6 @@ function sumOfSquares(num1, num2, num3){
 	}
 	return num1*num1+num2*num2+num3*num3;
 }
-//test
 
 // try{
 // 	var sum = sumOfSquares(5,3,10);
